@@ -2,16 +2,19 @@ import java.util.*;
 
 public class BasicCorePrograms {
     public static void main(String[] args) {
-        //Taking input year from user
-        System.out.println("Input year to check leap year or not");
+        // Get input from user
         Scanner sc = new Scanner(System.in);
-        int year = sc.nextInt();
+        System.out.println("Enter the Power of 2");
+        int N = sc.nextInt();
+        int num = 1;
 
-        //Checking conditions for leap year
-        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-            System.out.println(year +" is leap year");
-        } else {
-            System.out.println(year +" is not a leap year");
+        //Condition to get power of 2
+        for (int i = 1; i <= N; i++) {
+            if (N < 31) {
+                num = 2 * num;
+            }
         }
+        System.out.println(num);
     }
 }
+
