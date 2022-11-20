@@ -2,18 +2,22 @@ import java.util.*;
 
 public class BasicCorePrograms {
     public static void main(String[] args) {
-        // Get input from user
+
+        // Get input from the user
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Power of 2");
-        int N = sc.nextInt();
-        int num = 1;
-        //Condition to get power of 2
-        for (int i = 1; i <= N; i++) {
-            if (N < 31) {
-                num = 2 * num;
+        System.out.println("Enter the number");
+        int number = sc.nextInt();
+
+        // find prime factors of given number using for loop
+        for (int i = 2; i < number; i++) {
+            while (number % i == 0) {
+                System.out.println(i + " ");
+                number = number / i;
             }
         }
-        System.out.println(num);
+        if (number > 2) {
+            System.out.println(number);
+        }
     }
 }
 
