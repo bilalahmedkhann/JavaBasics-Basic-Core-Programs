@@ -3,21 +3,20 @@ import java.util.*;
 public class BasicCorePrograms {
     public static void main(String[] args) {
 
-        // Get input from the user
+        // Get Dividend and Divisor input from user
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number");
-        int number = sc.nextInt();
+        System.out.println("Enter the Dividend");
+        int dividend = sc.nextInt();
 
-        // find prime factors of given number using for loop
-        for (int i = 2; i < number; i++) {
-            while (number % i == 0) {
-                System.out.println(i + " ");
-                number = number / i;
-            }
-        }
-        if (number > 2) {
-            System.out.println(number);
-        }
+        System.out.println("Enter the Dividend");
+        int divisor = sc.nextInt();
+
+        // Computing Process
+        int quotient = dividend / divisor;
+        int remainder = dividend % divisor;
+
+        System.out.println("Quotient = " + quotient);
+        System.out.println("Remainder = " + remainder);
     }
 }
 
