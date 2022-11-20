@@ -3,20 +3,29 @@ import java.util.*;
 public class BasicCorePrograms {
     public static void main(String[] args) {
 
-        // Get Dividend and Divisor input from user
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the Dividend");
-        int dividend = sc.nextInt();
+        int temp;
+        Scanner sc=new Scanner(System.in);
 
-        System.out.println("Enter the Dividend");
-        int divisor = sc.nextInt();
+        // Get user input of A and B
+        System.out.println("Enter A value");
+        int a=sc.nextInt();
+        System.out.println("Enter B value");
+        int b=sc.nextInt();
 
-        // Computing Process
-        int quotient = dividend / divisor;
-        int remainder = dividend % divisor;
+        // Before swapping the numbers
+        System.out.println("Before Swapping the Numbers ");
+        System.out.println("A = "+a);
+        System.out.println("B = "+b);
 
-        System.out.println("Quotient = " + quotient);
-        System.out.println("Remainder = " + remainder);
+        // swapping process
+        temp=a;
+        a=b;
+        b=temp;
+
+        // After swapping the numbers
+        System.out.println("After Swapping the Numbers ");
+        System.out.println("A = "+a);
+        System.out.println("B = "+b);
     }
 }
 
